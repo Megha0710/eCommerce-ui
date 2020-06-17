@@ -1,0 +1,17 @@
+.cartItems{
+    font-size: 14px;
+    font-weight: 900;
+    position: absolute;
+    border: solid #d0c21f;
+    border-radius: 60%;
+    height: 17px;
+    width: 17px;
+    background:#d0c21f;
+    top: 3px;
+    right: 13px;
+}
+
+.cartItems .number{
+    position: absolute;
+    top: -4px;
+}

@@ -1,0 +1,34 @@
+:host {
+    display: block;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 2px 3px rgba(128,128,128,.25);
+    -moz-box-shadow:0 2px 3px rgba(128,128,128,.25);
+    box-shadow: 0 2px 3px rgba(128,128,128,.25);
+    background: white;
+    transition: all .5s cubic-bezier(.25,.46,.45,.94);
+    top: -1000px;
+    opacity: 0;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+:host.visible {
+    top: 9%;
+    opacity: 1;
+    z-index: 1;
+}
+.cart-empty {
+    float:right;
+    margin-right: 20px;
+}
+.cart-item-wrapper{
+    padding:10px;
+}
+
+.total{
+    text-align: center;
+    border-top: 1px solid;
+}

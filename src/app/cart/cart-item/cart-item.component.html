@@ -1,0 +1,33 @@
+<div class="cart-item-wrapper" *ngFor="let cart of cartList;let i = index">
+  <div>
+    <label>Product Name:</label>
+    {{cart.product.name}}
+  </div>
+  <div>
+    <label>Unit Price:</label>
+    Rs. {{cart.product.price}}
+  </div>
+  <div>
+    <label>No of Items: </label>
+    <quantity-control [quantity]="cart.quantity" (onChange)="changeQuantity(cart,$event)"></quantity-control>
+  </div>
+  <div>
+    <label>Subtotal: </label>
+    Rs. {{cart.quantity * cart.product.price}}
+  </div>
+  
+  <div>
+    <button type="button" class="btn btn-default btnWidth" aria-label="Left Align" id={{cart.product.id}}
+      (click)="removeFromCart(i)">Remove Item
+    </button>
+  </div>
+  <hr/>
+</div>
+<div class="total" *ngIf="cartList.length > 0">
+  <label>Total: </label>
+  {{totalPrice }}
+</div>
+
+<div *ngIf="cartList.length == 0">
+  <strong class="cart-empty">Your cart is empty</strong>
+</div>

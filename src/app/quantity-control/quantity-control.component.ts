@@ -1,6 +1,3 @@
-/**
- * Created by andrew.yang on 7/31/2017.
- */
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
